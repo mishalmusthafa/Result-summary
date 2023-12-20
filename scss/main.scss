@@ -1,0 +1,212 @@
+// variables
+// primary colors
+$light-red: hsl(0, 100%, 67%);
+$light-yellow: hsl(39, 100%, 56%);
+$light-green: hsl(166, 100%, 37%);
+$light-blue: hsla(234, 85%, 45%, 0.789);
+// Gradients
+$Light-slate-blue-background: hsl(252, 100%, 67%);
+$Light-royal-blue-background: hsl(241, 81%, 54%);
+$Violet-blue-circle: hsla(256, 72%, 46%, 1);
+$Persian-blue-circle: hsla(241, 72%, 46%, 0);
+// Neutral  
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+// utilities
+.text-center {
+  text-align: center;
+}
+
+.light-text {
+  color: $Light-lavender;
+}
+
+// background colors
+.bg {
+  &-light-red {
+    background: rgba($color: $light-red, $alpha: 0.1);
+    color: $light-red;
+  }
+
+  &-light-yellow {
+    background: rgba($color: $light-yellow, $alpha: 0.1);
+    color: $light-yellow;
+  }
+
+  &-light-green {
+    background: rgba($color: $light-green, $alpha: 0.1);
+    color: $light-green;
+  }
+
+  &-light-blue {
+    background: rgba($color: $light-blue, $alpha: 0.1);
+    color: $light-blue;
+  }
+}
+
+.btn {
+  display: block;
+  color: #fff;
+  background: $Dark-gray-blue ;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 30px;
+  transition: background 0.4s;
+
+  &:hover {
+    background-color: $Light-royal-blue-background;
+  }
+}
+
+// texts
+.ts-1 {
+  font-size: 0.8rem;
+}
+
+.ts-2 {
+  font-size: 0.9rem;
+}
+
+.ts-3 {
+  font-size: 1rem;
+}
+
+.ts-4 {
+  font-size: 1.1rem;
+}
+
+.ts-5 {
+  font-size: 1.2rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+  padding: 1.2rem 0;
+}
+
+body {
+  line-height: 1.2;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background: #fff;
+}
+
+.container {
+  padding: 80px 20px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+// Result container Grid Box
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+
+  .result {
+    background: linear-gradient(to bottom, $Light-slate-blue-background, $Light-royal-blue-background);
+    height: 100%;
+    width: 300px;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 20px;
+
+    &-score {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 20px 0px;
+      background: linear-gradient(to bottom, $Violet-blue-circle, $Persian-blue-circle);
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        color: #777;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: #b9b9b9;
+    }
+
+  }
+
+  .summary {
+    padding: 20px;
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      padding: 0 10px;
+      border-radius: 10px;
+
+      div {
+        display: flex;
+        gap: 10px;
+      }
+
+      p {
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+}
+
+
+
+// attribute
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:600px) {
+
+  // making the grid box to 1fr 
+  .item-container {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    height: 100%;
+  }
+}
